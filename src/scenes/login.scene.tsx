@@ -5,5 +5,9 @@ import {Link} from 'react-router-dom';
 import {CenteredLayout} from 'layouts';
 
 export const LoginScene: React.FC = () => {
-  return  <LoginContainer /> ;  
+  return  (
+  <CenteredLayout>
+    <LoginContainer />
+  </CenteredLayout>
+  );  
 };
