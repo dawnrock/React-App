@@ -4,9 +4,8 @@ import {switchRoutes} from './routes';
 
 import {
     LoginScene,
-    SubmoduleListScene,
-    EmployeeListScene,
-    EmployeeScene,
+    MainListScene,
+    MemberScene,
 } from 'scenes';
 
 export const RouterComponent : React.FC = () => {
@@ -20,19 +19,15 @@ export const RouterComponent : React.FC = () => {
                 />
                 <Route 
                     exact={true}
-                    path={switchRoutes.submodulelist}
-                    component={SubmoduleListScene}
+                    path={switchRoutes.mainList}
+                    component={MainListScene}
                 />
                 <Route 
                     exact={true}
-                    path={switchRoutes.employees}
-                    component={EmployeeListScene}
+                    path={switchRoutes.member}
+                    component={MemberScene}
                 />
-                <Route 
-                    exact={true}
-                    path={switchRoutes.editEmployee}
-                    component={EmployeeScene}
-                />
+                
             </Switch>
         </HashRouter>
     )

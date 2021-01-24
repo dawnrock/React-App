@@ -5,24 +5,24 @@ type NavigateFnId = (id: string) => string;
 interface SwitchRoutes {
     root: string;
     login: string;
-    submodulelist: string;
-    employees: string;
-    editEmployee: string;
+    mainList: string;
+    member: string;
+    editMember: string;
 }
 
 export const switchRoutes: SwitchRoutes = {
     root: '/',
     login: '/login',
-    submodulelist: '/submodule-list',
-    employees: '/employees',
-    editEmployee: '/employees/:id',
+    mainList: '/mainlist',
+    member: '/members',
+    editMember: '/members/:id',
 };
 
-interface Routes extends Omit<SwitchRoutes, 'editEmployee'> {
-    editEmployee: NavigateFnId;
+interface Routes extends Omit<SwitchRoutes, 'editMember'> {
+    editMember: NavigateFnId;
 }
 
 export const routes : Routes = {
     ...switchRoutes,
-    editEmployee: id => generatePath(switchRoutes.editEmployee, {id})
+    editMember: id => generatePath(switchRoutes.editMember, {id})
 }

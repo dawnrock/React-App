@@ -11,7 +11,7 @@ export const LoginContainer: React.FC = () => {
 
     const loginSucceeded = (isValid: boolean) : void => {
         if(isValid) {
-            history.push(routes.submodulelist);
+            history.push(routes.mainList);
         } else {
             alert('Invalid login');
         }

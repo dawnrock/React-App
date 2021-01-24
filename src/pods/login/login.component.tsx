@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import { createEmptyLogin, Login } from './login.vm';
 import { Formik, Form } from 'formik';
 import {TextFieldComponent} from 'common/form';
+import { formValidation } from './login.validation';
 
 interface Props {
   onLogin : (login :Login) => void;
@@ -20,7 +21,11 @@ export const LoginComponent: React.FC<Props> = (props) => {
     <Card>
       <CardHeader title="Login" />
       <CardContent>
-        <Formik onSubmit={onLogin} initialValues={createEmptyLogin()}>
+        <Formik 
+          onSubmit={onLogin} 
+          initialValues={createEmptyLogin()}
+          validate={formValidation.validateForm}
+        >
           {() => (
           <Form>
             <div
