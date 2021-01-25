@@ -25,13 +25,14 @@ export const MemberComponent: React.FC = () => {
   return (
       <>
       <img src={member.avatar_url} style={{ width: "25rem" }} />
+      
       <Card>
         
         <CardContent>
-        <h2>Nick de usuario:  {id}</h2>
-        <p>Nombre de usuario:  {member.name}</p>
-        <p>Empresa de usuario:  {member.company}</p>
-        <p>Bio de usuario:  {member.bio}</p>
+          <h2>Nick de usuario:  {id}</h2>
+          <p>Nombre de usuario:  {member.name}</p>
+          <p>Empresa de usuario:  {member.company}</p>
+          <p>Bio de usuario:  {member.bio}</p>
         </CardContent>
       </Card>
         
