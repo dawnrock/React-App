@@ -5,19 +5,19 @@ import { Link } from 'react-router-dom';
 
 
 interface Props {
-  mainListEntityRow: MainListEntity;
+  mainListMember: MainListEntity;
 }
 
 export const MainListTableRow: React.FC<Props> = (props) => {
-    const { mainListEntityRow } = props;
+    const { mainListMember } = props;
   
     return (
       <tr>
         <td>
-          <img src={mainListEntityRow.avatar_url} style={{ width: "10rem" }} />
+          <img src={mainListMember.avatar_url} style={{ width: "10rem" }} />
         </td>
         <td>
-          {<Link to={routes.editMember(mainListEntityRow.id)}>{mainListEntityRow.login}</Link>}
+          <Link to={routes.editMember(mainListMember.login)}>{mainListMember.login}</Link>
         </td>                
       </tr>
     );

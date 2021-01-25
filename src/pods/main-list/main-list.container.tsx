@@ -10,7 +10,7 @@ export const MainListContainer: React.FC = () => {
 
     return  (
         <>
-            <MainListComponent  />
+            <MainListComponent/>
             <Link to={routes.member}>Ir a página de miembro</Link>
             <Link to={routes.login}>Volver al inicio</Link>
             <Button type="button" variant="contained" color="primary">

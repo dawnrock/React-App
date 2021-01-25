@@ -7,12 +7,8 @@ import {CenteredLayout} from 'layouts';
 
 export const MainListScene: React.FC = () => {
   return (
-    <>
-      <h1>Bienvenido al buscador de usuarios de la API GitHub</h1>
-      <CenteredLayout>
-        <MainListContainer />
-      </CenteredLayout>
-            
-    </>
-    );
+  <CenteredLayout>
+      <MainListContainer />
+  </CenteredLayout>    
+  );
 };

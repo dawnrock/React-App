@@ -24,7 +24,7 @@ export const RouterComponent : React.FC = () => {
                 />
                 <Route 
                     exact={true}
-                    path={switchRoutes.member}
+                    path={switchRoutes.editMember}
                     component={MemberScene}
                 />
                 

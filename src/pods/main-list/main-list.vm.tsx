@@ -4,3 +4,8 @@ export interface MainListEntity {
     avatar_url: string;    
 }
 
+export const defaultList = () => ({
+    id: "",
+    login: "",
+    avatar_url: "",
+});
