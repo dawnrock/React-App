@@ -1,6 +1,6 @@
 import { generatePath } from "react-router-dom";
 
-type NavigateFnId = (id: string) => string;
+type NavigateFnId = (userLogin: string) => string;
 
 interface SwitchRoutes {
     root: string;
@@ -15,7 +15,7 @@ export const switchRoutes: SwitchRoutes = {
     login: '/login',
     mainList: '/mainlist',
     member: '/members',
-    editMember: '/members/:id',
+    editMember: '/members/:userLogin',
 };
 
 interface Routes extends Omit<SwitchRoutes, 'editMember'> {
@@ -24,5 +24,5 @@ interface Routes extends Omit<SwitchRoutes, 'editMember'> {
 
 export const routes : Routes = {
     ...switchRoutes,
-    editMember: id => generatePath(switchRoutes.editMember, {id})
+    editMember: userLogin => generatePath(switchRoutes.editMember, {userLogin})
 }
